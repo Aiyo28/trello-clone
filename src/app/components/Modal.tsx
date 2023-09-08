@@ -9,7 +9,7 @@ import Image from 'next/image';
 import { PhotoIcon } from '@heroicons/react/24/solid';
 
 function Modal() {
-	const imagePickerRef = useRef(null);
+	const imagePickerRef = useRef<HTMLInputElement>(null);
 	const [isOpen, closeModal] = useModalStore((state) => [
 		state.isOpen,
 		state.closeModal,
@@ -17,10 +17,10 @@ function Modal() {
 
 	const [
 		addTask,
-		image,
-		setImage,
 		newTaskInput,
 		setNewTaskInput,
+		image,
+		setImage,
 		newTaskType,
 	] = userBoardStore((state) => [
 		state.addTask,
@@ -90,7 +90,7 @@ function Modal() {
 										type="text"
 										value={newTaskInput}
 										onChange={(e) =>
-											setNewTaskInput(e.target.value)
+											setNewTaskInput(e.target.value!)
 										}
 										placeholder="Enter a task here ..."
 										className="w-full border border-gray-300 rounded-md outline-none p-5"
