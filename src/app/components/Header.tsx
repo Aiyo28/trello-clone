@@ -60,6 +60,7 @@ function Header() {
 						size={32}
 						icon={<UserCircleIcon />}
 						style={{ backgroundColor: '#0055D1' }}
+						alt="Aiyo28"
 					/>
 				</div>
 			</div>
